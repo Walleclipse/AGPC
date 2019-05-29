@@ -1,0 +1,72 @@
+configuration:
+  Name: PCGN
+  workspace: ./
+  tf_board: tfboard/
+
+  embeddings:
+    embed_size: 100 #300
+    vocab_size: 8000 #40000
+
+  encoder:
+    bidirectional: True
+    cell_type: LSTM
+    num_layers: 2
+    num_units: 512
+
+  decoder:
+    attn_num_units: 512
+    cell_type: LSTM
+    num_layers: 2
+    num_units: 512
+
+  user_profile:
+    use_user_feat: True
+    use_gate_memory: True
+    use_user_desc: True
+    use_blog_user_coattn: True
+    use_external_desc_express: True
+    use_external_feat_express: True
+    user_feat_dim: 88
+    user_feat_unit: 50
+    user_feat_mem_unit: 256
+    desc_rnn_unit: 200
+    desc_attn_num_units: 256
+    user_map_unit: 100
+
+  inference:
+    infer_file: ./sample_data/sample_data.tokenids
+    vocab_file:  ./sample_data/sample_vocab.txt
+    is_beam_search: True
+    beam_size: 10
+    infer_batch_size: 64
+    infer_source_max_length: 70
+    infer_target_max_length: 20
+    infer_desc_max_length: 10
+    infer_max_iter: 20
+    output_path: results/
+
+  training:
+    train_file: ./sample_data/sample_data.tokenids
+    dev_file: ./sample_data/sample_data.tokenids
+    source_max_length: 70
+    target_max_length: 20
+    desc_max_length: 10
+    gpu_fraction: 0.98
+    gpu_id: '0'
+    train_steps: 1000000
+    checkpoint_every: 1000
+    print_every: 10
+    batch_size: 64
+    infer_max_iter: 20
+    l2_regularize: null
+    learning_rate: 0.001
+    max_checkpoints: 10
+    max_gradient_norm: 5.0
+    state_pass: True
+
+
+
+
+
+
+
