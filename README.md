@@ -17,7 +17,7 @@ We provide the sample data in sample_data/sample_data.csv
 ```
 python train_PCGN.py
 ```
-All configuration and hyperparameter for the model in configs/pcgn_config.yaml
+All configuration and hyperparameter of the model in configs/pcgn_config.yaml
 ****************************************************************
 
 ### Inference and Evaluation
