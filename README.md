@@ -1,8 +1,8 @@
 ## Automatic Generation of Personalized Comment Based on User Profile
-- This is the code for ACL2019 student research workshop paper *AGPC: Automatic Generation of Personalized Comment Based on User Profile* 
+- This is the code for ACL 2019 SRW paper *AGPC: Automatic Generation of Personalized Comment Based on User Profile* 
 
 ### Requirements
-* Python 3.6
+* Python 3.5
 * tensorflow 1.4
 
 ### Preprocessing
